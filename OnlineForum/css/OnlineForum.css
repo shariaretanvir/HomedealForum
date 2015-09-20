@@ -1,0 +1,364 @@
+﻿                        
+                            /*Master Page Design*/
+body {
+    margin:0px;
+}
+a {
+   text-decoration:none;
+   color:#464545;
+}
+a:hover{
+    color:#0094ff;
+}
+
+.wraper {  
+    width:100%;
+    height:1500px;
+    margin:auto;
+    background-color:#808080;
+    
+    
+}
+.wraper .loginPopup {          /* Popup Login design*/
+    width:400px;
+    height:200px;
+    background-color:white;
+    margin:auto;
+    left:50%;
+    padding-top:50px;
+    border:2px solid #ff6a00;
+    position:fixed;
+    transform:translate(-50%,-200%);
+    -webkit-transform:translate(-50%,-200%);
+    -moz-transform:translate(-50%,-200%);
+}
+.wraper .loginPopup .loginTable {
+    width:300px;
+    height:100px;
+    margin:auto;    
+}
+.wraper .loginPopup .loginTable .loginTextbox {
+    width:170px;
+}
+.wraper:before{
+    content:"";
+    position:fixed;
+    display:none;
+    background-color:rgba(49, 48, 48, 0.50);
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index:999;
+}
+.wraper:target:before{
+    display:block;    
+}
+.wraper:target .loginPopup{
+    top:30%;
+    transform:translate(-50%, 0);
+    -webkit-transform:translate(-50%, 0);
+    -ms-transform:translate(-50%, 0);
+    transition:transform 200ms ease-out;
+    -webkit-transition:-webkit-transform 200ms ease-out;
+    z-index:1050;
+}
+
+               
+                /* popup login design ends */
+                
+
+.forumHead {
+    width:100%;
+    height:110px;
+    
+        
+}
+.forumHead .upperHead {
+    width:100%;
+    height:30px;
+    position:fixed;
+    margin:0px auto;
+    z-index:999;    
+    background-color:#2e2d2d;
+
+}
+.forumHead .upperHead .upperHeadContainer {
+    width:1080px;
+    height:100%;
+    margin:auto;
+    
+}
+.userInfo {
+    width:500px;
+    height:100px;
+    float:left;
+    
+}
+.userInfo .userDetail {
+    font-size:23px;
+    color:white;
+}
+.linkDiv {
+    width:300px;
+    height:100%;
+    float:right;
+    /*background-color:red;*/
+      
+}
+.headLink {
+    text-decoration:none;
+    color:white;
+    
+}
+
+.headLink:hover{
+    color:#ff6a00;
+}
+
+.forumHead .mainHead {
+    width:100%;
+    height:80px;
+    position:fixed;
+    margin:30px auto;
+    z-index:999;    
+    background-color:#464545;
+}
+.forumHead .mainHead .mainHeadContainer {
+    width:1080px;
+    height:100%;
+    margin:auto;
+    
+    
+}
+.forumBody {
+    width:100%;
+    height:1300px;
+    background-color:white;
+    
+}
+.forumBody .forumBanner {
+    width:100%;
+    height:300px;
+    position:relative;
+    z-index:222;
+    
+}
+.forumBody .forumBanner .bannerCaption{
+        position:absolute;
+        top:10px;
+        width:80%;
+        height:53px;
+        padding-left:10%;
+        
+        
+}
+.forumBody .forumBanner .bannerCaption .bannerCaptionText{
+        width:50%;
+        height:100%;
+        float:left;
+        font-family:Cambria;
+        font-size:45px;
+        color:#2e2d2d;    
+}
+.forumBody .forumBanner .bannerCaption .searchDiv{
+        width:50%;
+        height:100%;
+        float:right;
+            
+
+}
+.forumBody .forumBanner .bannerCaption .searchDiv .searchBox {
+    width:250px;
+    height:20px;
+    margin-top:15px;
+    margin-left:150px;            
+}
+.forumBody .mainBody{
+    width:80%;
+    height:1000px;
+    margin:auto;
+    
+    border:1px solid #ff6a00;   
+}
+.forumBody .mainBody .leftDiv{
+    width:70%;
+    height:100%;
+    float:left;
+    border-right:1px solid #ff6a00;
+    /*background-color:#e4e4e4;*/
+}
+.forumBody .mainBody .rightDiv{
+    width:29%;
+    height:100%;
+    float:left;
+    margin-left:8px;
+    
+}
+.forumBody .mainBody .rightDiv .usersQuestion {
+    width:300px;
+    height:200px;
+    /*background-color:red;*/
+   
+}
+.forumBody .mainBody .rightDiv .recentActivity {
+    width:300px;
+    height:600px;
+    border-top:1px solid #ff6a00;
+        
+}
+.forumBody .mainBody .rightDiv .recentActivity .activityList {
+    width:290px;
+    height:100%;
+    margin:auto;
+    overflow:scroll;
+    border:1px solid #808080;
+    background-color:rgba(245, 241, 241, 0.36);
+}
+
+.questionLins {
+    width:290px;
+    height:40px;
+    font-family:Cambria;
+    font-size:18px;
+    border-bottom:2px solid white;
+}
+                                    /*Master Page Design*/
+
+                 /***************** Forum Home page Design ********************/
+
+.mainContainer {
+    width:100%;
+    height:100%;
+    /*background-color:#ff6a00;*/
+}
+.mainContainer .containerCaption {
+    width:100%;
+    height:40px;
+    
+}
+.mainContainer .mainContent {
+    width:700px;
+    height:95%;
+    margin:auto;
+    background-color:rgba(245, 241, 241, 0.36);
+}
+.mainContainer .mainContent .contentCategory {
+    width:100%;
+    height:150px;
+    padding-left:5px;
+    background-color:#ede9e9;
+    border-bottom:2px solid white;
+}
+
+                /***************** Forum Home page Design ********************/
+
+                /******************* Mobile Page********/
+.questionsDiv {
+    width:700px;
+    height:90%;
+    overflow:scroll;
+    
+}
+.questionBlocks {
+    width:625px;
+    height:40px;
+    border-bottom:2px solid white;
+    font-family:Cambria;
+    font-size:18px;
+}
+                /****************** Question Details*************/
+
+.mainContainer .mainContent .userQuestion{
+    width:100%;
+    max-height:100px;
+    /*background-color:green;*/    
+}
+.mainContainer .mainContent .userQuestion .queIcon{
+    width:80px;
+    max-height:112px;
+    
+    float:left;
+    }
+.mainContainer .mainContent .userQuestion .que {
+    width:620px;
+    max-height:100px;
+    float:left;
+    font-family :Cambria;
+    font-size:25px;
+    border-bottom:2px solid white;
+}
+.mainContainer .mainContent .comments {
+    width:620px;
+    min-height:40px;
+    max-height:910px;
+    
+    float:left;
+}
+.commentsOnQue {
+    width:620px;
+    max-height:870px;
+    overflow:scroll;
+    
+}
+.mainContainer .mainContent .comments .commentsOnQue .commenterNameBlock {
+    background-color:#0087BD;
+    color:white;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+.mainContainer .mainContent .comments .commentsOnQue .commentLabel{
+    width:620px;
+    height:50px;
+}
+
+.mainContainer .mainContent .comments .commentingDiv {
+    width:618px;
+    height:38px;
+    background-color:#808080;
+    border:1px solid #ff6a00;
+}
+.mainContainer .mainContent .comments .commentingDiv .labelDiv {
+    width:100px;
+    height:31px;
+    text-align:center;    
+    float:left;
+    font-family:Cambria;
+    font-size:18px;
+    color:white;
+    padding-top:7px;
+}
+.mainContainer .mainContent .comments .commentTextBox{
+    width:518px;
+    height:38px;
+    float:left;
+}
+.mainContainer .mainContent .comments .commentTextBox .commentBox{
+    width:410px;
+    height:28px;
+    padding-bottom:1px;
+}
+
+                /******************** register.aspx***********/
+.mainContent .tableHolder {
+    width:100%;
+    height:100%;
+    padding-top:30px;
+   
+  
+}
+.mainContent .tableHolder .regesterTable {
+    width:400px;
+    height:200px;   
+    margin:auto;
+    
+}
+.mainContent .tableHolder .regesterTable .regTxtBox {
+    width:250px;
+    height:25px;
+}
+.mainContent .tableHolder .regesterTable .regLable {
+    font-family:Cambria;
+    font-size:18px;
+}

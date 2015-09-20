@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnlineForum.master.cs" Inherits="OnlineForum.OnlineForum" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online Forum</title>
+
+    <link href="css/OnlineForum.css" rel="stylesheet" />
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div class="wraper" id="login" >           <%--full body wrapper--%>
+
+        
+        
+        <div class="loginPopup">        <%--Login popup coding starts here --%>
+
+            <label style="font-size:25px;padding-left:100px;"> HomeDeal LOGIN</label>
+            <asp:Table runat="server" CssClass="loginTable">
+                <asp:TableRow>
+                    <asp:TableCell>Email</asp:TableCell>
+                    <asp:TableCell>:</asp:TableCell>
+                    <asp:TableCell><asp:TextBox runat="server" ID="mailBox" CssClass="loginTextbox"></asp:TextBox> </asp:TableCell>
+                </asp:TableRow>
+                
+                <asp:TableRow>
+                    <asp:TableCell>Password</asp:TableCell>
+                    <asp:TableCell>:</asp:TableCell>
+                    <asp:TableCell><asp:TextBox runat="server" TextMode="Password"  ID="passwordBox" CssClass="loginTextbox"></asp:TextBox> </asp:TableCell>
+                </asp:TableRow>
+
+                <asp:TableRow>
+                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell></asp:TableCell>
+                    <asp:TableCell>
+                        <asp:Button runat="server" Text="LOGIN" ID="loginButton" OnClick="loginButton_Click" />
+                        <asp:Button runat="server" Text="EXIT" />
+                    </asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+
+        </div>              <%--Login popup coding ends here --%>
+
+
+        
+       
+        
+         <div class="forumHead">     <%-- Header --%>
+
+            <div class="upperHead">
+                <div class="upperHeadContainer">
+                   
+                     <div class="userInfo">
+                        <asp:label runat="server" ID="userInfo" CssClass="userDetail"></asp:label>
+                    </div>
+                    
+                    <div class="linkDiv">
+                        <a href="#login" class="headLink">LOGIN</a> &nbsp;&nbsp;&nbsp;&nbsp;                         
+                        <a href="Userregister.aspx" class="headLink"> REGISTER </a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                        <a href="#" class="headLink" runat="server" onserverclick="logoutButton_Click">LOGOUT</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mainHead">
+                
+                            
+                <div class="mainHeadContainer">
+                    
+                    <a href="ForumHomePage.aspx"> <asp:label runat="server" style="font-family:Cambria;font-size:45px; color:white">HomeDeal.com</asp:label></a>
+                    
+                </div>
+            </div>
+            
+        </div>                  <%-- Header Ends--%>
+
+        <div class="forumBody"> <%-- Forum body --%>
+            
+            <div class="forumBanner">   <%-- Top banner --%>
+                <img src="Images/banner.jpg" style="width:100%;height:100%;" />
+                <div class="bannerCaption">
+                    <div class="bannerCaptionText">
+                        <label>Discussion Forum</label>
+                    </div>
+                    
+                    <div class="searchDiv">
+                        <span> 
+                            <input type="text" class="searchBox" placeholder="I'm searching for..." />
+                            <input type="button" value="Search" style="height:25px"/>
+                        </span>
+                                                
+                    </div> 
+                    
+
+                </div>
+            </div>              <%-- Banner ends --%>
+
+            <div class="mainBody">      <%-- Main Body --%>
+
+                <div class="leftDiv">
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">       <%-- ForumHomePage.aspx attached here --%>
+        
+                    </asp:ContentPlaceHolder>           <%-- ForumHomePage.aspx ends here --%>
+                </div>
+
+                <div class="rightDiv">
+                    <div class="usersQuestion">
+                        <label style="font-family:Cambria;font-size:30px;"> My Question...</label>
+                        <div>
+                            <label>Question on:</label>
+                            <asp:DropDownList ID="categoryDropDownList" runat="server" DataTextField="SubcategoryName" DataValueField="SubcategoryId">
+                                
+
+                            </asp:DropDownList>
+
+                            <asp:TextBox runat="server" TextMode="MultiLine" ID="questionBox" style="width:290px;height:100px;margin-top:5px; font-family:Cambria; font-size:20px;"  placeholder="Ask your question in forum..." />
+                            <asp:Button ID="postQuestion" runat="server" Text="Post Question" OnClick="postQuestion_Click" />                      
+                        </div>
+                    </div>
+                    
+                    <div class="recentActivity">
+                        <label style="font-family:Cambria;font-size:30px;"> Recent Activities...</label>
+
+                        <div class="activityList">
+                            <asp:Repeater ID="Repeater1" runat="server">
+                                <ItemTemplate>
+                                    <asp:Table runat="server" CssClass="questionLins">
+                                        <asp:TableRow runat="server" >
+                                            <asp:TableCell runat="server" >
+
+                                                <a href="QuestionDeatils.aspx?id=<%#Eval("qId").ToString() %>" id='<%#Eval("qId") %>'><asp:Label ID="Label2" runat="server" Text='<%#Eval("question") %>'></asp:Label></a>
+                                                <%--<a href="QuestionDeatils.aspx"><asp:Label ID="Label1" runat="server" Text='<%#Eval("question") %>'></asp:Label></a>--%>
+                                            </asp:TableCell>
+                                           
+                                        </asp:TableRow>
+                                    </asp:Table>
+                                </ItemTemplate>
+                            </asp:Repeater>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>                  <%-- Main Body Ends --%>
+
+        </div>
+
+       
+    </div>                      <%--full body wrapper ends--%>
+
+    </form>
+</body>
+</html>
+ 

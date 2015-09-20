@@ -1,0 +1,15 @@
+F:\4.2 Project\OnlineForum\OnlineForum\bin\OnlineForum.dll
+F:\4.2 Project\OnlineForum\OnlineForum\bin\OnlineForum.pdb
+F:\4.2 Project\OnlineForum\OnlineForum\obj\Debug\OnlineForum.dll
+F:\4.2 Project\OnlineForum\OnlineForum\obj\Debug\OnlineForum.pdb
+F:\4.2 Project\OnlineForum\OnlineForum\obj\Debug\OnlineForum.csprojResolveAssemblyReference.cache
+F:\4.2 Project\OnlineForum\OnlineForum\bin\Facebook.dll
+F:\4.2 Project\OnlineForum\OnlineForum\bin\Facebook.xml
+D:\OnlineForum\OnlineForum\OnlineForum\bin\OnlineForum.dll
+D:\OnlineForum\OnlineForum\OnlineForum\bin\OnlineForum.pdb
+D:\OnlineForum\OnlineForum\OnlineForum\bin\Facebook.dll
+D:\OnlineForum\OnlineForum\OnlineForum\bin\Facebook.xml
+D:\OnlineForum\OnlineForum\OnlineForum\obj\Debug\OnlineForum.csprojResolveAssemblyReference.cache
+D:\OnlineForum\OnlineForum\OnlineForum\obj\Debug\OnlineForum.dll
+D:\OnlineForum\OnlineForum\OnlineForum\obj\Debug\OnlineForum.pdb
+D:\OnlineForum\OnlineForum\OnlineForum\bin\OnlineForum.dll.config
